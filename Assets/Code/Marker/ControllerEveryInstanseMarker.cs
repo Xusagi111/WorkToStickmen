@@ -73,6 +73,45 @@ public class ControllerEveryInstanseMarker : IMarker
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         MarckerImage.transform.position = pos;
+
+        Debug.Log($"Pos x: {pos.x} Pos y: {pos.y}");
+
+
+        if (pos.x > 50 && pos.y == 50)
+        {
+            MyProperty.transform.rotation = Quaternion.Euler(0, 0, 270);
+        }
+        if (pos.x == 1870 && pos.y > 50)
+        {
+            MyProperty.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if (pos.x > 50 && pos.y == 1030)
+        {
+            MyProperty.transform.rotation = Quaternion.Euler(0, 0, 90);
+        }
+        if (pos.x == 50 && pos.y > 50)
+        {
+            MyProperty.transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
+
+
+        if (pos.x == 50 && pos.y == 1030)
+        {
+            MyProperty.transform.rotation = Quaternion.Euler(0, 0, 137);
+        }
+        if (pos.x == 1830 && pos.y > 1030)
+        {
+            MyProperty.transform.rotation = Quaternion.Euler(0, 0, 44);
+        }
+        if (pos.x > 1830 && pos.y == 50)
+        {
+            MyProperty.transform.rotation = Quaternion.Euler(0, 0, 331);
+        }
+        if (pos.x == 50 && pos.y == 50)
+        {
+            MyProperty.transform.rotation = Quaternion.Euler(0, 0, 221);
+        }
+
     }
 }
 public interface IMarker
