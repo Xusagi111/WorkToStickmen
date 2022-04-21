@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,21 +6,28 @@ public class MarkerController : MonoBehaviour
 {
     [SerializeField] private DataEnemy dataEnemy = new DataEnemy();
     [SerializeField] private List<GameObject> Point;
+    [SerializeField] private List<IMarker> markers = new List<IMarker>();
+    [SerializeField] private bool isUpdate; 
     private void Start()
     {
         new SpavnMarker(dataEnemy.EnemyPoint, Point);
         for (int i = 0; i < Point.Count; i++)
         {
-            //Point[i].
+            ControllerEveryInstanseMarker controllerEveryInstanse = new ControllerEveryInstanseMarker();
+            controllerEveryInstanse.Start(dataEnemy.EnemyPoint[i].gameObject, Point[i].gameObject);
+            markers.Add(controllerEveryInstanse);
         }
+        isUpdate = true;
+        StartCoroutine(FixedUpdateTo3F());
     }
-    private void FixedUpdate()
+    IEnumerator FixedUpdateTo3F()
     {
-        for (int i = 0; i < Point.Count; i++)
+        while (isUpdate)
         {
-            if (Point.Count > dataEnemy.EnemyPoint.Length)
+            yield return new WaitForSeconds(0.3f);
+            for (int i = 0; i < markers.Count; i++)
             {
-
+                markers[i].UpdateMarker();
             }
         }
     }

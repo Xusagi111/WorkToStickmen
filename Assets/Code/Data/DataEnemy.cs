@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[SerializeField]
+[System.Serializable]
 public class DataEnemy
 {
     public GameObject[] EnemyPoint;

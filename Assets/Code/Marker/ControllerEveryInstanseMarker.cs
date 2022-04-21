@@ -2,27 +2,29 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ControllerEveryInstanseMarker : MonoBehaviour, IMarker
+public class ControllerEveryInstanseMarker : IMarker
 {
-    public Image MarckerImage { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-    public RectTransform MyProperty { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-    public GameData GameData { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-    public GameObject TrakingEnemy { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+    public Image MarckerImage { get ; set ; }
+    public RectTransform MyProperty { get; set; }
+    public GameData GameData { get ; set; }
+    public GameObject TrakingEnemy { get ; set; }
 
     public void ClearMarker()
     {
         throw new System.NotImplementedException();
     }
 
-    public void Start() // Добавление элементов к маркеру
+    public void Start(GameObject trakingEnemy, GameObject markerImage) // Добавление элементов к маркеру
     {
+        TrakingEnemy = trakingEnemy;
+        MarckerImage = markerImage.GetComponent<Image>();
         MyProperty = MarckerImage.gameObject.GetComponent<RectTransform>();
         GameData = GameData.instanse;
     }
 
     public void UpdateMarker()
     {
-        float dist = Vector3.Distance(TrakingEnemy.transform.position, gameObject.transform.position);
+        float dist = Vector3.Distance(TrakingEnemy.transform.position, GameData.Player.transform.position);
         Debug.Log($"Дистанция:  { dist}");
         if (dist > 1)
         {
@@ -38,5 +40,5 @@ public interface IMarker //Если использовать переиспол�
     public GameObject TrakingEnemy { get; set; }
     public void UpdateMarker();
     public void ClearMarker();
-    public void Start();
+    public void Start(GameObject trakingEnemy, GameObject markerImage);
 }
