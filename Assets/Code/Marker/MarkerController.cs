@@ -18,29 +18,27 @@ public class MarkerController : MonoBehaviour
             markers.Add(controllerEveryInstanse);
         }
         isUpdate = true;
-        StartCoroutine(FixedUpdateTo3F());
     }
-    IEnumerator FixedUpdateTo3F()
+    private void FixedUpdate()
     {
-        while (isUpdate)
+        for (int i = 0; i < markers.Count; i++)
         {
-            yield return new WaitForSeconds(0.3f);
-            for (int i = 0; i < markers.Count; i++)
-            {
-                markers[i].UpdateMarker();
-            }
+            markers[i].UpdateMarker();
         }
     }
     private void DestroymarkerEnemy(GameObject currentGameobj) //Будет вызываться по событию. Удалять текущий маркер и чистить поле гейм объекта.
     {
-        //for (int i = 0; i < Point.Count; i++)
-        //{
-        //    if (itemEnemy.CurrentObjTracking == currentGameobj)
-        //    {
-        //        itemEnemy.CurrentObjTracking = null;
-        //        Point[i].gameObject.SetActive(false);
-        //    }   
-        //}
+        for (int i = 0; i < markers.Count; i++)
+        {
+            if (markers[i].TrakingEnemy == currentGameobj)
+            {
+                markers[i].ClearMarker();
+                markers.RemoveAt(i);
+
+                dataEnemy.EnemyPoint.Remove(currentGameobj);
+                return;
+            }   
+        }
     }
 }
 

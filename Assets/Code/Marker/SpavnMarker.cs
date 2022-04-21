@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class SpavnMarker //Cпвн и добавление в маркеры текущих объектов
 {
-    public SpavnMarker(GameObject[] EnemyPoint, List<GameObject> listCurrentPoint)
+    public SpavnMarker(List<GameObject> EnemyPoint, List<GameObject> listCurrentPoint)
     {
         UiData uiData = UiData.instanse;
-        for (int i = 0; i < EnemyPoint.Length; i++)
+        for (int i = 0; i < EnemyPoint.Count; i++)
         {
             GameObject CreateGameObj = GameObject.Instantiate(uiData.PrefabMarker, Vector3.zero, Quaternion.identity);
             AddSettings(CreateGameObj, uiData);

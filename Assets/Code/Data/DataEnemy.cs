@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public class DataEnemy
 {
-    public GameObject[] EnemyPoint;
+    public List<GameObject> EnemyPoint;
 }
