@@ -4363,8 +4363,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.051328223, y: -0.004106025, z: 0.00021103499, w: 0.9986734}
-  m_LocalPosition: {x: 4.49673, y: 1.565, z: -9.414146}
+  m_LocalRotation: {x: 0.044791065, y: -0.14709225, z: 0.0066678626, w: 0.9880856}
+  m_LocalPosition: {x: 7.068063, y: 1.5149999, z: -9.576529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6804,14 +6804,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 3.84, y: 3.88, z: 8}
-  m_XDamping: 2.34
+  m_BindingMode: 4
+  m_FollowOffset: {x: 1.77, y: 3.83, z: -9}
+  m_XDamping: 20
   m_YDamping: 20
   m_ZDamping: 20
   m_AngularDampingMode: 0
   m_PitchDamping: 0
-  m_YawDamping: 20
+  m_YawDamping: 6.45
   m_RollDamping: 0
   m_AngularDamping: 0
 --- !u!114 &1576067118
@@ -6851,8 +6851,8 @@ MonoBehaviour:
   m_VerticalDamping: 0.5
   m_ScreenX: 0.5
   m_ScreenY: 0.5077994
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
+  m_DeadZoneWidth: 0.381
+  m_DeadZoneHeight: 0.162
   m_SoftZoneWidth: 0.8
   m_SoftZoneHeight: 0.8
   m_BiasX: 0
@@ -9987,7 +9987,7 @@ GameObject:
   - component: {fileID: 2135882745}
   - component: {fileID: 2135882744}
   m_Layer: 0
-  m_Name: 'MainCameraCinemachin '
+  m_Name: Main Camera Cinemachin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10035,8 +10035,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135882743}
-  m_LocalRotation: {x: 0.051328223, y: -0.004106025, z: 0.00021103499, w: 0.9986734}
-  m_LocalPosition: {x: 4.49673, y: 1.565, z: -9.414146}
+  m_LocalRotation: {x: 0.044791065, y: -0.14709225, z: 0.0066678626, w: 0.9880856}
+  m_LocalPosition: {x: 7.068063, y: 1.5149999, z: -9.576529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1576067115}
