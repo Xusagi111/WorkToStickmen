@@ -18,7 +18,7 @@ public class MovmentPlayer : MonoBehaviour
             Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
             if (!start)
             {
-                StartCoroutine(NewTestCorrutine());
+               // StartCoroutine(NewTestCorrutine());
             }
         }
         else
