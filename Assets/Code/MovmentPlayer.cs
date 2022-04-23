@@ -18,7 +18,7 @@ public class MovmentPlayer : MonoBehaviour
             Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
             if (!start)
             {
-               // StartCoroutine(NewTestCorrutine());
+               StartCoroutine(NewTestCorrutine());
             }
         }
         else
@@ -28,9 +28,9 @@ public class MovmentPlayer : MonoBehaviour
             Debug.Log("намскемхе");
         }
     }
-        IEnumerator NewTestCorrutine()
+    IEnumerator NewTestCorrutine()
     {
-        start = true;      
+        start = true;
         yield return new WaitForSeconds(0.1f);
         if (_joystick.Horizontal > 0.6f)
         {
