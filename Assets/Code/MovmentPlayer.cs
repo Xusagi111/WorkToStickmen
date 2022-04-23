@@ -13,9 +13,6 @@ public class MovmentPlayer : MonoBehaviour
         {
             _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _joystick.Vertical * _moveSpeed, 0);
         }
-        else
-        {
-            _rigidbody.velocity = new Vector3(0, -_moveSpeed * 0.5f, 0);
-        }
+
     }
 }
