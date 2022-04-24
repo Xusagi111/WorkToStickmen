@@ -10,12 +10,20 @@ public class MovmentPlayer : MonoBehaviour
     [SerializeField] float Quaternion1;
     [SerializeField] float Quaternion2;
     [SerializeField] bool start = false;
+    [SerializeField] Animator _animator;
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
     private void FixedUpdate()
     {
         if (_joystick.Horizontal != 0 && _joystick.Vertical != 0)
         {
             _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _joystick.Vertical * _moveSpeed, 0);
             Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
+            _animator.SetFloat("Vertical", _joystick.Vertical);
+            _animator.SetFloat("Horizontal", _joystick.Horizontal);
             if (!start)
             {
                StartCoroutine(NewTestCorrutine());
