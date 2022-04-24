@@ -4593,7 +4593,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.04383702, y: -0.050502285, z: 0.002218842, w: 0.997759}
+  m_LocalRotation: {x: 0.04383702, y: -0.05050228, z: 0.0022188418, w: 0.997759}
   m_LocalPosition: {x: 5.200161, y: 1.8188922, z: -12.277567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -9410,7 +9410,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135882743}
-  m_LocalRotation: {x: 0.04383702, y: -0.050502285, z: 0.002218842, w: 0.997759}
+  m_LocalRotation: {x: 0.04383702, y: -0.05050228, z: 0.0022188418, w: 0.997759}
   m_LocalPosition: {x: 5.200161, y: 1.8188922, z: -12.277567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9570,14 +9570,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149017160331}
   serializedVersion: 2
-  m_Mass: 50
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 56
-  m_CollisionDetection: 1
+  m_Constraints: 4
+  m_CollisionDetection: 2
 --- !u!114 &919132149017160333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9590,20 +9590,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a5af6811ac446f49bc6343be723726b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _EditorDrawSetup: 1
+  _EditorDrawSetup: 0
   Processor:
     _EditorDrawBones: 1
     _EditorDrawGenerator: 1
-    _EditorDrawMore: 0
+    _EditorDrawMore: 1
     DebugV3: {x: 0, y: 0, z: 0}
-    ObjectWithAnimator: {fileID: 0}
+    ObjectWithAnimator: {fileID: 543450652672487473}
     RagdollDummyBase: {fileID: 0}
     RagdollDummyRoot: {fileID: 0}
     RagdollDummySkeleton: {fileID: 0}
-    RootInParent: {fileID: 0}
+    RootInParent: {fileID: 445346530}
     PelvisInDummy: {fileID: 0}
-    RagdollDummyAnimator: {fileID: 0}
-    _helpChestName: 
+    RagdollDummyAnimator: {fileID: 543450652672487473}
+    _helpChestName: mixamorig:Spine1
     usePreGeneratedDummy: 0
     BaseTransform: {fileID: 543450652672487473}
     Pelvis: {fileID: 445346530}
@@ -9618,29 +9618,29 @@ MonoBehaviour:
     LeftLowerLeg: {fileID: 271351274}
     RightUpperLeg: {fileID: 1279355676}
     RightLowerLeg: {fileID: 720068091}
-    PelvisLocalRight: {x: 0, y: 0, z: 0}
-    PelvisLocalUp: {x: 0, y: 0, z: 0}
-    PelvisLocalForward: {x: 0, y: 0, z: 0}
-    PelvisToBase: {x: 0, y: 0, z: 0}
-    LForearmToHand: {x: 0, y: 0, z: 0}
-    RForearmToHand: {x: 0, y: 0, z: 0}
-    HeadToTip: {x: 0, y: 0, z: 0}
+    PelvisLocalRight: {x: 0.7300786, y: -0.04950208, z: 0.6815681}
+    PelvisLocalUp: {x: -0.0047742017, y: 0.99697906, z: 0.07752428}
+    PelvisLocalForward: {x: -0.6833467, y: -0.059852764, z: 0.7276367}
+    PelvisToBase: {x: 0.00032844488, y: -0.79136616, z: -0.0563006}
+    LForearmToHand: {x: -7.105428e-18, y: 0.27675304, z: 2.2737369e-16}
+    RForearmToHand: {x: -7.105428e-18, y: 0.27694413, z: 0}
+    HeadToTip: {x: -0, y: 0.48607865, z: 0.04606425}
     FreeFallRagdoll: 0
     RagdolledBlend: 1
     RotateToPoseForce: 0.75
     UnitySolverIterations: 14
     BlendOnCollision: 1
-    ConstantArmsRagdoll: 0
-    ConstantHeadRagdoll: 0
-    ConstantSpineRagdoll: 0
+    ConstantArmsRagdoll: 0.762
+    ConstantHeadRagdoll: 0.839
+    ConstantSpineRagdoll: 0.724
     ConfigurableSpring: 1650
     ConfigurableDamp: 18
     HipsPinSpring: 4000
     HipsPositionOffset: {x: 0, y: 0, z: 0}
     HipsAxisRotation: {x: 0, y: 0, z: 0}
-    StandUpInFootPoint: 0
-    BlendingSpeed: 0.5
-    SensitiveCollision: 0
+    StandUpInFootPoint: 0.198
+    BlendingSpeed: 0.294
+    SensitiveCollision: 1
     HeadForce: 1
     SpineForce: 1
     RightArmForce: 1
@@ -9675,7 +9675,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149017160331}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56f1d263b0f03df4e9d47792b12a0c73, type: 3}
   m_Name: 
@@ -9683,8 +9683,8 @@ MonoBehaviour:
   _joystick: {fileID: 2113836750}
   _rigidbody: {fileID: 919132149017160332}
   _moveSpeed: 5
-  Quaternion1: 10
-  Quaternion2: 10
+  Quaternion1: 0
+  Quaternion2: 0
   start: 0
   _animator: {fileID: 919132149017160334}
 --- !u!4 &937986664321196379
@@ -10384,7 +10384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384410855556719279, guid: 81f8ec71e3f830a4d997b890bec629db, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5444421443495578630, guid: 81f8ec71e3f830a4d997b890bec629db, type: 3}
       propertyPath: m_LocalRotation.w
