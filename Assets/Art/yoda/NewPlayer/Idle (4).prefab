@@ -389,7 +389,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2042780392872409301}
   - component: {fileID: 5384410855556719279}
-  - component: {fileID: 2005175562379869137}
   m_Layer: 0
   m_Name: Idle (4)
   m_TagString: Untagged
@@ -432,91 +431,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2005175562379869137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662595022307631727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5af6811ac446f49bc6343be723726b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _EditorDrawSetup: 1
-  Processor:
-    _EditorDrawBones: 1
-    _EditorDrawGenerator: 0
-    _EditorDrawMore: 0
-    DebugV3: {x: 0, y: 0, z: 0}
-    ObjectWithAnimator: {fileID: 0}
-    RagdollDummyBase: {fileID: 0}
-    RagdollDummyRoot: {fileID: 0}
-    RagdollDummySkeleton: {fileID: 0}
-    RootInParent: {fileID: 0}
-    PelvisInDummy: {fileID: 0}
-    RagdollDummyAnimator: {fileID: 0}
-    _helpChestName: 
-    usePreGeneratedDummy: 0
-    BaseTransform: {fileID: 2042780392872409301}
-    Pelvis: {fileID: 5767205931213690945}
-    SpineStart: {fileID: 6080355282558315474}
-    Chest: {fileID: 827675629935886138}
-    Head: {fileID: 5347456138517408342}
-    LeftUpperArm: {fileID: 5444421443495578630}
-    LeftForeArm: {fileID: 9008484474204561863}
-    RightUpperArm: {fileID: 5230484855036723259}
-    RightForeArm: {fileID: 4053396232177445526}
-    LeftUpperLeg: {fileID: 4059916334517166397}
-    LeftLowerLeg: {fileID: 8713746240262060515}
-    RightUpperLeg: {fileID: 7677699358185697150}
-    RightLowerLeg: {fileID: 6327851352237117924}
-    PelvisLocalRight: {x: 0, y: 0, z: 0}
-    PelvisLocalUp: {x: 0, y: 0, z: 0}
-    PelvisLocalForward: {x: 0, y: 0, z: 0}
-    PelvisToBase: {x: 0, y: 0, z: 0}
-    LForearmToHand: {x: 0, y: 0, z: 0}
-    RForearmToHand: {x: 0, y: 0, z: 0}
-    HeadToTip: {x: 0, y: 0, z: 0}
-    FreeFallRagdoll: 0
-    RagdolledBlend: 1
-    RotateToPoseForce: 0.75
-    UnitySolverIterations: 14
-    BlendOnCollision: 1
-    ConstantArmsRagdoll: 0
-    ConstantHeadRagdoll: 0
-    ConstantSpineRagdoll: 0
-    ConfigurableSpring: 1650
-    ConfigurableDamp: 18
-    HipsPinSpring: 4000
-    HipsPositionOffset: {x: 0, y: 0, z: 0}
-    HipsAxisRotation: {x: 0, y: 0, z: 0}
-    StandUpInFootPoint: 0
-    BlendingSpeed: 0.5
-    SensitiveCollision: 0
-    HeadForce: 1
-    SpineForce: 1
-    RightArmForce: 1
-    LeftArmForce: 1
-    LeftLegForce: 1
-    RightLegForce: 1
-    ExtendedAnimatorSync: 0
-    HipsPin: 0
-    TryAnimatePelvis: 0
-    StartAfterTPose: 0
-    ResetIsKinematic: 0
-    FixRootInPelvis: 0
-    Calibrate: 0
-    Persistent: 0
-    AnimatePhysics: 0
-    BodyIgnoreMore: 0
-  ObjectWithAnimator: {fileID: 2042780392872409301}
-  RootBone: {fileID: 0}
-  CustomRagdollAnimator: {fileID: 0}
-  AutoDestroy: 1
-  PreGenerateDummy: 0
-  TargetParentForRagdollDummy: {fileID: 0}
 --- !u!1 &1859127890636889464
 GameObject:
   m_ObjectHideFlags: 0
