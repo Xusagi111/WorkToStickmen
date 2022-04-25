@@ -7,12 +7,8 @@ public class MovmentPlayer : MonoBehaviour
     [SerializeField] DynamicJoystick _joystick;
     [SerializeField] Rigidbody _rigidbody;
     [SerializeField] float _moveSpeed;
-    [SerializeField] float Quaternion1;
-    [SerializeField] float Quaternion2;
     [SerializeField] bool start = false;
     [SerializeField] Animator _animator;
-    [SerializeField] GameObject Parent;
-    [SerializeField] GameObject Sword;
 
     //Logic Sword
     private void Start()
@@ -29,13 +25,9 @@ public class MovmentPlayer : MonoBehaviour
             
             _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _joystick.Vertical * _moveSpeed, 0);
             Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
-            _animator.SetBool("isBland", true);
-            _animator.SetFloat("Vertical", _joystick.Vertical);
-            _animator.SetFloat("Horizontal", _joystick.Horizontal);
-           
             if (!start)
             {
-               StartCoroutine(NewTestCorrutine());
+                StartCoroutine(NewTestCorrutine());
             }
         }
         else
@@ -49,16 +41,27 @@ public class MovmentPlayer : MonoBehaviour
     IEnumerator NewTestCorrutine()
     {
         start = true;
-        yield return new WaitForSeconds(0.1f);
-        if (_joystick.Horizontal > 0.6f)
-        {
+        yield return new WaitForSeconds(0.2f);
 
-            _rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.Euler(0, 0, Quaternion1));
-        }
-        if (_joystick.Horizontal < 0.6f)
-        {
-            _rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.Euler(0, 0, Quaternion2));
-        }
+        _animator.SetBool("isBland", true);
+        _animator.SetFloat("Vertical", _joystick.Vertical * _moveSpeed);
+        _animator.SetFloat("Horizontal", _joystick.Horizontal);
         start = false;
     }
+
+    //IEnumerator NewTestCorrutine()
+    //{
+    //    start = true;
+    //    yield return new WaitForSeconds(0.1f);
+    //    if (_joystick.Horizontal > 0.6f)
+    //    {
+
+    //        _rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.Euler(0, 0, Quaternion1));
+    //    }
+    //    if (_joystick.Horizontal < 0.6f)
+    //    {
+    //        _rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.Euler(0, 0, Quaternion2));
+    //    }
+    //    start = false;
+    //}
 }
