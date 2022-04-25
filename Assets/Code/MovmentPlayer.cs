@@ -23,7 +23,7 @@ public class MovmentPlayer : MonoBehaviour
         if (_joystick.Horizontal != 0 && _joystick.Vertical != 0)
         {
             
-            _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _joystick.Vertical * _moveSpeed, 0);
+           // _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _joystick.Vertical * _moveSpeed, 0);
             Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
             if (!start)
             {
@@ -33,9 +33,9 @@ public class MovmentPlayer : MonoBehaviour
         else
         {
             _rigidbody.velocity = new Vector3(0, 0, 0);
-            _rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.Euler(0, 0, 0));
-            _animator.SetBool("isBland", false);
-            Debug.Log("намскемхе");
+            //_rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.Euler(0, 0, 0));
+            //_animator.SetBool("isBland", false);
+            //Debug.Log("намскемхе");
         }
     }
     IEnumerator NewTestCorrutine()
@@ -44,8 +44,8 @@ public class MovmentPlayer : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         _animator.SetBool("isBland", true);
-        _animator.SetFloat("Vertical", _joystick.Vertical * _moveSpeed);
-        _animator.SetFloat("Horizontal", _joystick.Horizontal);
+        _animator.SetFloat("Vertical", _joystick.Vertical *_moveSpeed);
+        _animator.SetFloat("Horizontal", _joystick.Horizontal * _moveSpeed);
         start = false;
     }
 
