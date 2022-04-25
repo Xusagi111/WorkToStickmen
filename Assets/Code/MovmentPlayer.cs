@@ -11,24 +11,22 @@ public class MovmentPlayer : MonoBehaviour
     [SerializeField] float Quaternion2;
     [SerializeField] bool start = false;
     [SerializeField] Animator _animator;
+    [SerializeField] GameObject Parent;
+    [SerializeField] GameObject Sword;
+
+    //Logic Sword
     private void Start()
     {
         _animator = GetComponent<Animator>();
+       // Sword.transform.parent = Parent.transform;
+
     }
 
     private void FixedUpdate()
     {
         if (_joystick.Horizontal != 0 && _joystick.Vertical != 0)
         {
-            //if (true)
-            //{
-            //    _rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.Euler(0, -167.69f, 0));
-            //    Debug.Log("True");
-            //}
-            //else
-            //{
-            //    _rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.Euler(0, 167.69f, 0));
-            //}
+            
             _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _joystick.Vertical * _moveSpeed, 0);
             Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
             _animator.SetBool("isBland", true);
