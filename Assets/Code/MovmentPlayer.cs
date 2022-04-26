@@ -24,7 +24,7 @@ public class MovmentPlayer : MonoBehaviour
     {
         if (_joystick.Horizontal != 0 && _joystick.Vertical != 0)
         {
-            Vector3 a = new Vector3(0, _joystick.Vertical * _moveSpeed, _joystick.Horizontal * _moveSpeed);
+            Vector3 a = new Vector3(_joystick.Horizontal * _moveSpeed, _joystick.Vertical * _moveSpeed);
 
             _rigidbody.velocity = a;
             Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
