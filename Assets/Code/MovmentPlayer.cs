@@ -30,18 +30,18 @@ public class MovmentPlayer : MonoBehaviour
             _rigidbody.velocity = a;
             Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
 
-            //if (_currentPlayer.transform.transform.eulerAngles.y > -_constRotate && _joystick.Horizontal < -0.1 && !_isRotateLeft)
-            //{
-            //    _currentPlayer.transform.transform.eulerAngles = new Vector3(0, -180, 0);
-            //    _isRotateLeft = true;
-            //    _isRotateRight = false;
-            //}
-            //if (_currentPlayer.transform.transform.eulerAngles.y > _constRotate && _joystick.Horizontal > 0.0002 && !_isRotateRight)
-            //{
-            //    _currentPlayer.transform.transform.eulerAngles = new Vector3(0, 0, 0);
-            //    _isRotateLeft = false;
-            //    _isRotateRight = true;
-            //}
+            if (_currentPlayer.transform.transform.eulerAngles.y > -_constRotate && _joystick.Horizontal < -0.1 && !_isRotateLeft)
+            {
+                _currentPlayer.transform.transform.eulerAngles = new Vector3(0, -180, 0);
+                _isRotateLeft = true;
+                _isRotateRight = false;
+            }
+            if (_currentPlayer.transform.transform.eulerAngles.y > _constRotate && _joystick.Horizontal > 0.0002 && !_isRotateRight)
+            {
+                _currentPlayer.transform.transform.eulerAngles = new Vector3(0, 0, 0);
+                _isRotateLeft = false;
+                _isRotateRight = true;
+            }
         }
     }
 
