@@ -4,5 +4,6 @@ using UnityEngine;
 using RootMotion.Dynamics;
 public class Link : MonoBehaviour
 {
-   public PuppetMaster PuppetMaster;
+    public PuppetMaster PuppetMaster;
+    public GameObject CurrentGameObj;
 }

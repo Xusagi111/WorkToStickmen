@@ -13,8 +13,13 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 Debug.Log("Вошел");
                 other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                if (other.gameObject.GetComponent<Link>().CurrentGameObj != null)
+                {
+                    other.gameObject.GetComponent<Link>().PuppetMaster.mappingWeight = 1;
+                    other.gameObject.GetComponent<Link>().PuppetMaster.state = RootMotion.Dynamics.PuppetMaster.State.Dead;
+                }
                 //other.gameObject.GetComponent<Link>().PuppetMaster.state = RootMotion.Dynamics.PuppetMaster.State.Dead;
-                
+
                 //collision.gameObject.GetComponent<CharacterJoint>().
             }
         }
