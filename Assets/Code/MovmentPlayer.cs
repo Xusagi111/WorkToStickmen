@@ -9,32 +9,54 @@ public class MovmentPlayer : MonoBehaviour
     [SerializeField] float _moveSpeed;
     [SerializeField] bool start = false;
     [SerializeField] Animator _animator;
+    private const int _constRotate = 2;
+    [SerializeField] private bool _isRotateRight = true;
+    [SerializeField] private bool _isRotateLeft;
+
 
     //Logic Sword
     private void Start()
     {
         _animator = GetComponent<Animator>();
-       // Sword.transform.parent = Parent.transform;
-
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
+        _animator.SetBool("isBland", true);
+        _animator.SetFloat("Vertical", _joystick.Vertical * _moveSpeed);
+        _animator.SetFloat("Horizontal", _joystick.Horizontal * _moveSpeed);
+
         if (_joystick.Horizontal != 0 && _joystick.Vertical != 0)
         {
-            
-           // _rigidbody.velocity = new Vector3(_joystick.Horizontal * _moveSpeed, _joystick.Vertical * _moveSpeed, 0);
+            Vector3 a = new Vector3(0, _joystick.Vertical * _moveSpeed, _joystick.Horizontal * _moveSpeed);
+
+            _rigidbody.velocity = a;
             Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
-            if (!start)
+
+
+            if (gameObject.transform.transform.eulerAngles.y > -_constRotate && _joystick.Horizontal < -0.1 && !_isRotateLeft)
             {
-                StartCoroutine(NewTestCorrutine());
+                gameObject.transform.transform.eulerAngles = new Vector3(0, -180, 0);
+                _isRotateLeft = true;
+                _isRotateRight = false;
             }
+            if (gameObject.transform.transform.eulerAngles.y > _constRotate && _joystick.Horizontal > 0.0002 && !_isRotateRight)
+            {
+                gameObject.transform.transform.eulerAngles = new Vector3(0,0,0);
+                _isRotateLeft = false;
+                _isRotateRight = true;
+            }
+
+            //if (!start)
+            //{
+            //    StartCoroutine(NewTestCorrutine());
+            //}
         }
         else
         {
-            _rigidbody.velocity = new Vector3(0, 0, 0);
+            //_rigidbody.velocity = new Vector3(0, 0, 0);
             //_rigidbody.MoveRotation(_rigidbody.rotation * Quaternion.Euler(0, 0, 0));
-            //_animator.SetBool("isBland", false);
+            _animator.SetBool("isBland", false);
             //Debug.Log("намскемхе");
         }
     }
