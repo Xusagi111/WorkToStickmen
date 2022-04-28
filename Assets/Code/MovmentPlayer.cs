@@ -41,13 +41,18 @@ public class MovmentPlayer : MonoBehaviour
             Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
             if (_currentPlayer.transform.transform.eulerAngles.y > -_constRotate && _joystick.Horizontal < -0.1 && !_isRotateLeft)
             {
-                _currentPlayer.transform.transform.eulerAngles = new Vector3(0, -180, 0);
+                Quaternion quaternion = new Quaternion(0, -180, 0, 0);
+
+                _currentPlayer.GetComponent<Rigidbody>().MoveRotation(quaternion.normalized);
+               // _currentPlayer.transform.transform.eulerAngles = new Vector3(0, -180, 0);
                 _isRotateLeft = true;
                 _isRotateRight = false;
             }
             if (_currentPlayer.transform.transform.eulerAngles.y > _constRotate && _joystick.Horizontal > 0.0002 && !_isRotateRight)
             {
-                _currentPlayer.transform.transform.eulerAngles = new Vector3(0, 180, 0);
+                Quaternion quaternion = new Quaternion(0, 180, 0, 0);
+                _currentPlayer.GetComponent<Rigidbody>().MoveRotation(quaternion.normalized);
+                //_currentPlayer.transform.transform.eulerAngles = new Vector3(0, 180, 0);
                 _isRotateLeft = false;
                 _isRotateRight = true;
             }
@@ -56,59 +61,9 @@ public class MovmentPlayer : MonoBehaviour
         {
             _animator.SetBool("isBland", true);
         }
-
-        if (_isTestDebug)
-        {
-            var TestLimbConnectedBody = TestLimb.connectedBody;
-            TestLimb.connectedBody = null;
-
-            var TestLimbConnected2Body = TestLimb2.connectedBody;
-            TestLimb2.connectedBody = null;
-
-            var TestLimbConnected3Body = TestLimb3.connectedBody;
-            TestLimb3.connectedBody = null;
-
-
-            var TestLimbConnected4Body = TestLimb4.connectedBody;
-            TestLimb4.connectedBody = null;
-
-            Quaternion quaternion = new Quaternion(0, -180, 0, 0);
-            
-            
-            _rigidbody.freezeRotation = false;
-
-            _currentPlayer.transform.transform.eulerAngles = new Vector3(0, -180, 0);
-            gameObject.transform.transform.eulerAngles = new Vector3(0, -180, 0);
-
-            _currentPlayer.GetComponent<Rigidbody>().rotation =  quaternion.normalized;
-            _rigidbody.MoveRotation(quaternion.normalized);
-            //Debug.Log(quaternion.normalized);
-
-
-
-            _rigidbody.constraints |= RigidbodyConstraints.FreezeRotationZ;
-           // _rigidbody.isKinematic = true;
-
-            TestLimb.connectedBody = TestLimbConnectedBody;
-
-            TestLimb2.connectedBody = TestLimbConnected2Body;
-
-            TestLimb3.connectedBody = TestLimbConnected3Body;
-
-            TestLimb4.connectedBody = TestLimbConnected4Body;
-
-            _isTestDebug = false;
-        }
-
-        //if (_isAnimation)
-        //{
-        //    _animator.SetBool("isBland", true);
-        //}
-        //else
-        //{
-        //    _animator.SetBool("isBland", false);
-        //}
     }
+
+    //_currentPlayer.transform.transform.eulerAngles = new Vector3(0, 180, 0);
 
     //private void Update()
     //{
