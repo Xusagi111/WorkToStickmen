@@ -4304,6 +4304,12 @@ MonoBehaviour:
   _animator: {fileID: 0}
   _isRotateRight: 1
   _isRotateLeft: 0
+  _isAnimation: 0
+  _isTestDebug: 0
+  TestLimb: {fileID: 0}
+  TestLimb2: {fileID: 0}
+  TestLimb3: {fileID: 0}
+  TestLimb4: {fileID: 0}
 --- !u!1 &861590683
 GameObject:
   m_ObjectHideFlags: 0
@@ -5793,6 +5799,12 @@ MonoBehaviour:
   _animator: {fileID: 0}
   _isRotateRight: 1
   _isRotateLeft: 0
+  _isAnimation: 0
+  _isTestDebug: 0
+  TestLimb: {fileID: 0}
+  TestLimb2: {fileID: 0}
+  TestLimb3: {fileID: 0}
+  TestLimb4: {fileID: 0}
 --- !u!23 &1029349922
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6558,6 +6570,12 @@ MonoBehaviour:
   _animator: {fileID: 0}
   _isRotateRight: 1
   _isRotateLeft: 0
+  _isAnimation: 0
+  _isTestDebug: 0
+  TestLimb: {fileID: 0}
+  TestLimb2: {fileID: 0}
+  TestLimb3: {fileID: 0}
+  TestLimb4: {fileID: 0}
 --- !u!1 &1369836057
 GameObject:
   m_ObjectHideFlags: 0
@@ -8996,12 +9014,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joystick: {fileID: 2113836750}
   _rigidbody: {fileID: 4523363455691017208}
-  _currentPlayer: {fileID: 4523363454710234328}
+  _currentPlayer: {fileID: 4523363455728642318}
   _moveSpeed: 10
   start: 0
-  _animator: {fileID: 0}
+  _animator: {fileID: 4523363454710234324}
   _isRotateRight: 1
   _isRotateLeft: 0
+  _isAnimation: 0
+  _isTestDebug: 0
+  TestLimb: {fileID: 4523363454710234331}
+  TestLimb2: {fileID: 4523363454554473166}
+  TestLimb3: {fileID: 4523363455184715932}
+  TestLimb4: {fileID: 311746747850235958}
 --- !u!153 &311746747850235958
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -9120,10 +9144,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.08160065
-  m_Height: 2.494309
+  m_Radius: 0.081600666
+  m_Height: 1.944438
   m_Direction: 1
-  m_Center: {x: 0.41900778, y: 3.3998773, z: 1.4698627}
+  m_Center: {x: 0.41900778, y: 3.6748002, z: 1.4698644}
 --- !u!4 &366175168464488085
 Transform:
   m_ObjectHideFlags: 0
@@ -12310,6 +12334,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4523363454554473165}
+  - component: {fileID: 4523363454554473167}
+  - component: {fileID: 4523363454554473166}
   m_Layer: 0
   m_Name: mixamorig:LeftHandIndex1
   m_TagString: Untagged
@@ -12332,6 +12358,118 @@ Transform:
   m_Father: {fileID: 4523363455962094150}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!153 &4523363454554473166
+ConfigurableJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4523363454554473164}
+  m_ConnectedBody: {fileID: 4523363455691017208}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0.40023994, y: 2.6340556, z: 1.5073106}
+  serializedVersion: 2
+  m_SecondaryAxis: {x: -1, y: 0, z: 0}
+  m_XMotion: 0
+  m_YMotion: 0
+  m_ZMotion: 0
+  m_AngularXMotion: 1
+  m_AngularYMotion: 1
+  m_AngularZMotion: 1
+  m_LinearLimitSpring:
+    spring: 0
+    damper: 0
+  m_LinearLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularXLimitSpring:
+    spring: 0
+    damper: 0
+  m_LowAngularXLimit:
+    limit: -50
+    bounciness: 0
+    contactDistance: 0
+  m_HighAngularXLimit:
+    limit: 50
+    bounciness: 0
+    contactDistance: 0
+  m_AngularYZLimitSpring:
+    spring: 0
+    damper: 0
+  m_AngularYLimit:
+    limit: 50
+    bounciness: 0
+    contactDistance: 0
+  m_AngularZLimit:
+    limit: 25
+    bounciness: 0
+    contactDistance: 0
+  m_TargetPosition: {x: 0, y: 0, z: 0}
+  m_TargetVelocity: {x: 0, y: 0, z: 0}
+  m_XDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_YDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_ZDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
+  m_RotationDriveMode: 0
+  m_AngularXDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_AngularYZDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_SlerpDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_ProjectionMode: 0
+  m_ProjectionDistance: 0.1
+  m_ProjectionAngle: 180
+  m_ConfiguredInWorldSpace: 0
+  m_SwapBodies: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &4523363454554473167
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4523363454554473164}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!153 &4523363454559617334
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -12714,7 +12852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d25a140bfa1c49bfafcaa11cff00f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedRigidbody: {fileID: 0}
+  selectedRigidbody: {fileID: 4523363454710234330}
   selectedCollider: {fileID: 4523363454710234327}
   symmetry: 1
   mode: 0
@@ -13729,6 +13867,7 @@ GameObject:
   - component: {fileID: 4523363455022710478}
   - component: {fileID: 4523363455022710513}
   - component: {fileID: 4523363455022710512}
+  - component: {fileID: 4523363455022710516}
   m_Layer: 9
   m_Name: mixamorig:LeftHand
   m_TagString: Untagged
@@ -13750,6 +13889,102 @@ Transform:
   m_Father: {fileID: 4523363456093177263}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!153 &4523363455022710516
+ConfigurableJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4523363455022710514}
+  m_ConnectedBody: {fileID: 4523363455691017208}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0.4527588, y: 2.6457481, z: 1.6555809}
+  serializedVersion: 2
+  m_SecondaryAxis: {x: 0, y: 1, z: 0}
+  m_XMotion: 1
+  m_YMotion: 1
+  m_ZMotion: 1
+  m_AngularXMotion: 1
+  m_AngularYMotion: 1
+  m_AngularZMotion: 1
+  m_LinearLimitSpring:
+    spring: 0
+    damper: 0
+  m_LinearLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularXLimitSpring:
+    spring: 0
+    damper: 0
+  m_LowAngularXLimit:
+    limit: -25
+    bounciness: 0
+    contactDistance: 0
+  m_HighAngularXLimit:
+    limit: 132.02228
+    bounciness: 0
+    contactDistance: 0
+  m_AngularYZLimitSpring:
+    spring: 0
+    damper: 0
+  m_AngularYLimit:
+    limit: 36.21789
+    bounciness: 0
+    contactDistance: 0
+  m_AngularZLimit:
+    limit: 40.214695
+    bounciness: 0
+    contactDistance: 0
+  m_TargetPosition: {x: 0, y: 0, z: 0}
+  m_TargetVelocity: {x: 0, y: 0, z: 0}
+  m_XDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_YDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_ZDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
+  m_RotationDriveMode: 0
+  m_AngularXDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_AngularYZDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_SlerpDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_ProjectionMode: 0
+  m_ProjectionDistance: 0.1
+  m_ProjectionAngle: 180
+  m_ConfiguredInWorldSpace: 0
+  m_SwapBodies: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &4523363455029240938
 GameObject:
   m_ObjectHideFlags: 0
@@ -14958,7 +15193,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 56
+  m_Constraints: 88
   m_CollisionDetection: 0
 --- !u!1 &4523363455728642318
 GameObject:
@@ -16534,6 +16769,12 @@ MonoBehaviour:
   _animator: {fileID: 0}
   _isRotateRight: 1
   _isRotateLeft: 0
+  _isAnimation: 0
+  _isTestDebug: 0
+  TestLimb: {fileID: 0}
+  TestLimb2: {fileID: 0}
+  TestLimb3: {fileID: 0}
+  TestLimb4: {fileID: 0}
 --- !u!33 &4735072959405352390
 MeshFilter:
   m_ObjectHideFlags: 0
