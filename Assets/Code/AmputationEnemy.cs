@@ -52,7 +52,7 @@ public class AmputationEnemy : MonoBehaviour
     private IEnumerator ActiveWinPanel()
     {
         UiData.instanse.Winimage.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         UiData.instanse.Winimage.gameObject.SetActive(false);
     }
 }
