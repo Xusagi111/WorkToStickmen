@@ -11,31 +11,33 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (other.gameObject.GetComponent<Link>())
             {
-                Debug.Log("Вошел");
-                other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                Rigidbody CurrentEnemyRigidbody = other.gameObject.GetComponent<Rigidbody>();
+                CurrentEnemyRigidbody.isKinematic = false;
+                CurrentEnemyRigidbody.velocity = new Vector3(5,10,0);
+
+                //other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                StartCoroutine(ChangesTimeScale());
                 if (other.gameObject.GetComponent<Link>().CurrentGameObj != null)
                 {
                     other.gameObject.GetComponent<Link>().PuppetMaster.mappingWeight = 1;
                     other.gameObject.GetComponent<Link>().PuppetMaster.state = RootMotion.Dynamics.PuppetMaster.State.Dead;
+                    StartCoroutine(ActiveWinPanel());
                 }
-                //other.gameObject.GetComponent<Link>().PuppetMaster.state = RootMotion.Dynamics.PuppetMaster.State.Dead;
-
-                //collision.gameObject.GetComponent<CharacterJoint>().
             }
         }
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Enemy")
-    //    {
-    //        if (collision.gameObject.GetComponent<ConfigurableJoint>())
-    //        {
-    //            ExtensionMethods.RemoveComponent<ConfigurableJoint>(collision.gameObject, false);
-    //            //collision.gameObject.GetComponent<CharacterJoint>().
-    //        }
-    //    }
-    //}
-
+    private IEnumerator ChangesTimeScale()
+    {
+        Time.timeScale = 0.5f;
+        yield return new WaitForSeconds(0.5f);
+        Time.timeScale = 1f;
+    }
+    private IEnumerator ActiveWinPanel()
+    {
+        UiData.instanse.Winimage.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        UiData.instanse.Winimage.gameObject.SetActive(false);
+    }
 }
 public static class ExtensionMethods
 {
