@@ -19,7 +19,6 @@ public class AmputationEnemy : MonoBehaviour
                 other.gameObject.GetComponentInParent<Link>().PuppetMaster.state = RootMotion.Dynamics.PuppetMaster.State.Dead;
                
                 StartCoroutine(DelayToAnimation(other.gameObject.GetComponentInParent<Link>().AnimatorEnemy, other.gameObject, CurrentEnemyRigidbody));
-               // Destroy(other.gameObject);
 
                 StartCoroutine(ActiveWinPanel()); //В дальнейшм убрать
                 return;
@@ -27,7 +26,6 @@ public class AmputationEnemy : MonoBehaviour
 
             StartCoroutine(DelayToAnimation(other.gameObject.GetComponentInParent<Link>().AnimatorEnemy, other.gameObject, CurrentEnemyRigidbody));
            
-            //CurrentEnemyRigidbody.velocity = new Vector3(5, 10, 0);
 
             StartCoroutine(ChangesTimeScale());
            

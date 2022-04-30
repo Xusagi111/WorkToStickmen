@@ -24,6 +24,7 @@ public class ControllerEveryInstanseMarker : IMarker
 
     public void UpdateMarker()
     {
+        Debug.Log(TrakingEnemy.transform.position + " " + GameData.Player.transform.position);
         float dist = Vector3.Distance(TrakingEnemy.transform.position, GameData.Player.transform.position);
 
         if (dist < 10)
