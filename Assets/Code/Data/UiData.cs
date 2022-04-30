@@ -7,6 +7,7 @@ public class UiData : MonoBehaviour
     public Canvas Canvas;
     public Image Winimage;
     public static UiData instanse;
+    public Image DebugImage;
     private void Awake()
     {
         instanse = this;

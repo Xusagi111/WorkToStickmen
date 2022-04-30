@@ -11,7 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 39fe729f5dcad0d41bc1d8df009668cb, type: 3}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 1
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -125,7 +125,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 1
     - _GlossyReflections: 1
-    - _Metallic: 0.25
+    - _Metallic: 1
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -141,7 +141,7 @@ Material:
     - _TransNormalDistortion: 0.2
     - _TransScattering: 5.75
     - _TransShadow: 0.9
-    - _Translucency: 5
+    - _Translucency: 0
     - _TranslucencyMaskPower: 1
     - _UVSec: 0
     - _ZWrite: 1
