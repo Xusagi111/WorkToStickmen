@@ -34,7 +34,7 @@ public class MovmentPlayer : MonoBehaviour
             Vector3 a = new Vector3(_joystick.Horizontal * _moveSpeed, _joystick.Vertical * _moveSpeed);
 
             _rigidbody.velocity = a;
-            Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
+           // Debug.Log($"_joystick.Horizontal: {_joystick.Horizontal} + _joystick.Vertical: {_joystick.Vertical} ");
             if (_currentPlayer.transform.transform.eulerAngles.y > -_constRotate && _joystick.Horizontal < -0.1 && !_isRotateLeft)
             {
                 Quaternion quaternion = new Quaternion(0, -180, 0, 0);
