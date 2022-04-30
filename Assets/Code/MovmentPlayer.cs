@@ -17,11 +17,7 @@ public class MovmentPlayer : MonoBehaviour
 
     [SerializeField] private bool _isTestDebug;
 
-    [SerializeField] private ConfigurableJoint TestLimb;
-    [SerializeField] private ConfigurableJoint TestLimb2;
-    [SerializeField] private ConfigurableJoint TestLimb3;
-    [SerializeField] private ConfigurableJoint TestLimb4;
-
+    [SerializeField] private Vector3 _vector3 = new Vector3(0, 2, 0);
     //Logic Sword
     private void Start()
     {
@@ -60,6 +56,58 @@ public class MovmentPlayer : MonoBehaviour
         else
         {
             _animator.SetBool("isBland", true);
+        }
+       // CheckGround();
+    }
+
+    private void CheckGround()
+    {
+       
+        Ray ray = new Ray(transform.position, Vector3.forward);
+        //Debug.DrawLine(transform.position, Vector3.forward, color: Color.green);
+        RaycastHit hit;
+
+        //if (Physics.Raycast(ray, out hit, 3f))
+        //{
+        //    Debug.Log("transform.position" + transform.position);
+        //    if (hit.collider.tag == "Ground")
+        //    {
+        //        Debug.Log(hit.collider + "Ground");
+        //    }
+        //}
+        //if (Physics.Raycast(ray, out hit, 3f))
+        //{
+        //    Debug.Log("transform.position" + transform.position);
+        //    if (hit.collider.tag == "Ground")
+        //    {
+        //        Debug.Log(hit.collider + "Ground");
+        //    }
+        //}
+        //if (Physics.Raycast(ray, out hit, 3f))
+        //{
+        //    Debug.Log("transform.position" + transform.position);
+        //    if (hit.collider.tag == "Ground")
+        //    {
+        //        Debug.Log(hit.collider + "Ground");
+        //    }
+        //}
+
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 2);
+        int i = 0;
+        while (i < hitColliders.Length)
+        {
+            // Debug.DrawLine(transform.position, transform.position + new Vector3(50,50,50), color: Color.green);
+            if (hitColliders[i].tag == "Ground")
+            {
+
+
+                    //Debug.LogError("Ground");
+                    //_currentPlayer.GetComponent<Rigidbody>().velocity = _vector3;
+
+            }
+            Debug.Log(hitColliders[i].name);
+
+            i++;
         }
     }
 
