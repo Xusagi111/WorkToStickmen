@@ -10,6 +10,7 @@ public class StaticClass : MonoBehaviour
     }
     public IEnumerator enumerator(float second, GameObject GameObjSetActive)
     {
+        GameObjSetActive.SetActive(true);
         yield return new WaitForSeconds(second);
         GameObjSetActive.SetActive(false);
     }

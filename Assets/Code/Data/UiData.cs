@@ -8,6 +8,7 @@ public class UiData : MonoBehaviour
     public Image Winimage;
     public static UiData instanse;
     public Image DebugImage;
+    public GameObject ParticleWin;
     private void Awake()
     {
         instanse = this;

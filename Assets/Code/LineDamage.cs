@@ -12,14 +12,14 @@ public class LineDamage : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 20f))
         {
-            Debug.Log("transform.position" + transform.position);
-            Debug.Log(hit.collider.name );
+            //Debug.Log("transform.position" + transform.position);
+            //Debug.Log(hit.collider.name );
             if (hit.collider.gameObject.GetComponentInParent<DataPlayer>())
             {
+                StartCoroutine(StaticClass.instanse.enumerator(0.5f, UiData.instanse.DebugImage.gameObject));             
+                UiData.instanse.DebugImage.GetComponentInChildren<Text>().text = "Нанесён урон!!!";
+                hit.collider.gameObject.GetComponentInParent<DataPlayer>().Damage(1);
 
-                StartCoroutine(StaticClass.instanse.enumerator(0.5f, UiData.instanse.DebugImage.gameObject));
-                UiData.instanse.DebugImage.gameObject.SetActive(true);
-                UiData.instanse.DebugImage.GetComponentInChildren<Text>().text = "Нанесен урон!!!";
             }
         }
     }
