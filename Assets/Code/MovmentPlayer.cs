@@ -1,5 +1,6 @@
 using MoreMountains.NiceVibrations;
 using UnityEngine;
+using System.Collections;
 
 public class MovmentPlayer : MonoBehaviour
 {
@@ -59,9 +60,21 @@ public class MovmentPlayer : MonoBehaviour
         if (collision.gameObject.name == "Enemy_Sword")
         {
             Debug.Log("Collizion + Проиграть партиклы и вибрацию"); //Проиграть партиклы и вибрацию
+            Instantiate(ParticleSystem, collision.transform.position, Quaternion.identity);
             MMVibrationManager.Vibrate();
-            _rigidbody.velocity = new Vector3(0, -2f);
+            StartCoroutine(TimeLineToParicle());
         }
+    }
+
+    private IEnumerator TimeLineToParicle()
+    {
+        ParticleSystem.gameObject.GetComponentInChildren<ParticleSystem>().Play();
+        ParticleSystem.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        ParticleSystem.gameObject.GetComponentInChildren<ParticleSystem>().Stop();
+        ParticleSystem.gameObject.SetActive(false);
+
+
     }
     private void CheckGround()
     {
